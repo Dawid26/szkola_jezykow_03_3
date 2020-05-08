@@ -1,0 +1,26 @@
+usunięcie typ_konta ze student dodanie bit konto premium 
+
+Dodać możliwość wstawienia adresu zamieszkania / adresu zameldowania
+bin value w tabeli adres 
+
+ kurs_has_nauczyciel
+kurs_ma_nauczyciela
+
+student_has_kurs
+student_ma_kurs
+
+
+administrator_has_nauczyciel
+administrator_ma_nauczyciela
+
+dodać czy student premium 
+okres umowy dla nauczycieli 
+
+crl+enter (baza odswierza)
+
+usuwanie z rejestracaj z 
+SELECT student.email, student.student_id FROM student  WHERE email= '$email'
+UNION
+SELECT nauczyciel.email, nauczyciel.nauczyciel_id FROM nauczyciel WHERE email= '$email'
+UNION
+SELECT administrator.email, administrator.administrator_id FROM administrator WHERE email= '$email'");
