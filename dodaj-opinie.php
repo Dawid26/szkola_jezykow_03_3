@@ -36,7 +36,7 @@ if (isset($_POST['dodajOpinie'])) {
         print_r($result);
     }
 } else {
-    echo "error";
+    //echo "error";
 }
 
 ?>
