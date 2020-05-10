@@ -1,20 +1,4 @@
-<!--<!doctype html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    Required meta tags -->
-<!--    <meta charset="utf-8">-->
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
-<!---->
-<!--    Bootstrap CSS -->
-<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
-<!---->
-<!--    <script src='https://kit.fontawesome.com/a076d05399.js'></script>-->
-<!--    <link rel="stylesheet" href="css/bootstrap.css">-->
-<!--    <link rel="stylesheet" href="css/style.css">-->
-<!--    <link rel="stylesheet" href="style.css">-->
-<!---->
-<!--</head>-->
-<!--<body>-->
+
 <?php
 
 
@@ -29,7 +13,7 @@ include_once('menu-sprawdzanie.php'); ?>
             <div class="col-12 text-center">
                 <a href="#nauczyciele" style="color:white;text-align:center;">
                     <button class="col-4 p-4">
-                        Poznaj nas
+                        Zobacz nasze kursy
                     </button>
                 </a>
             </div>
@@ -42,28 +26,42 @@ include_once('menu-sprawdzanie.php'); ?>
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center p-3 mb-3 mt-3"><span>Szkoła języków</span></br>kursy</h1>
+                <h1 class="text-center p-3 mb-3 mt-3"><span>Nasze kursy </span></br></h1>
             </div>
         </div>
         <div class="row d-flex justify-content-center p-4">
-            <div class="col-4">
+            <div class="col-12 mt-5">
                 <div class="card">
                     <img src="assets/new/kurs-niemieckiego.jpg" alt="niemcy">
-                    <h3>Niemiecki</h3>
+                    <h3>Niemiecki dla informatyków</h3>
                     <p>Kurs niemieckiego </p>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-12 mt-5">
                 <div class="card">
                     <img src="assets/new/kurs-angielskiego.jpg" alt="niemcy">
-                    <h3>Angielski</h3>
+                    <h3>Angielski dla informatyków</h3>
                     <p>Kurs angielskiego </p>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-12 mt-5">
                 <div class="card">
                     <img src="assets/new/niemiecki-dla-informatykow-2.jpg" alt="niemcy">
-                    <h3>Niemiecki dla informatyków</h3>
+                    <h3>Niemiecki ogólny poziomy od A1 do C1</h3>
+                    <p>Kurs niemieckiego </p>
+                </div>
+            </div>
+            <div class="col-12 mt-5">
+                <div class="card">
+                    <img src="assets/new/niemiecki-dla-informatykow-2.jpg" alt="niemcy">
+                    <h3>Angielski ogólny poziomy od A1 do C1</h3>
+                    <p>Kurs niemieckiego </p>
+                </div>
+            </div>
+            <div class="col-12 mt-5">
+                <div class="card">
+                    <img src="assets/new/niemiecki-dla-informatykow-2.jpg" alt="niemcy">
+                    <h3>Konto premium, dostęp do wszystkich kursów i lekcje z profesjonalnym nauczycielem</h3>
                     <p>Kurs niemieckiego </p>
                 </div>
             </div>
@@ -75,16 +73,6 @@ include_once('menu-sprawdzanie.php'); ?>
                 <!--                </button>-->
                 <button type="button" class="btn btn-primary btn-lg btn-block m-4">
                     Zobacz nasz sklep
-                </button>
-            </a>
-        </div>
-        <div class="col-3 text-center center-block">
-            <a href="nasza-oferta.php">
-                <!--                <button style="color:white;text-align:center;background-color: lightblue;" class="col-4 p-3">-->
-                <!--                    Wszystkie kursy-->
-                <!--                </button>-->
-                <button type="button" class="btn btn-info btn-lg btn-block m-4">
-                    Opis kursów
                 </button>
             </a>
         </div>

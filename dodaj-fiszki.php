@@ -31,10 +31,10 @@ if (isset($_POST['addRecord'])) {
         </script>
         <p></p>
         <?php
-        print_r($result);
+//        print_r($result);
     }
 } else {
-    echo "error";
+//    echo "error";
 }
 
 ?>

@@ -79,7 +79,7 @@ From
 
 $results2 = $db_connection->query($query2);
 ?>
-
+<div class="container">
 <table class="table">
     <thead>
     <tr>
@@ -103,6 +103,7 @@ $results2 = $db_connection->query($query2);
     ?>
     </tbody>
 </table>
+</div>
 <?php include('footer.php'); ?>
 
 </body>
