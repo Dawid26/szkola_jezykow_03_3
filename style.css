@@ -69,3 +69,6 @@ nav li:hover {
     color: black;
     margin-top: 50px;
 }
+.naszaOferta .card img {
+    max-height: 350px!important;
+}

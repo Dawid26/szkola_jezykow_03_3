@@ -23,7 +23,7 @@ include_once('menu-sprawdzanie.php'); ?>
 <!-- header end -->
 <!-- div-->
 <div id="naszaMetoda">
-    <div class="container">
+    <div class="container naszaOferta">
         <div class="row">
             <div class="col-12">
                 <h1 class="text-center p-3 mb-3 mt-3"><span>Nasze kursy </span></br></h1>
