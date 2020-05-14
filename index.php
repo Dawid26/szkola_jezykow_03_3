@@ -1,20 +1,4 @@
-<!--<!doctype html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    Required meta tags -->
-<!--    <meta charset="utf-8">-->
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
-<!---->
-<!--    Bootstrap CSS -->
-<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
-<!---->
-<!--    <script src='https://kit.fontawesome.com/a076d05399.js'></script>-->
-<!--    <link rel="stylesheet" href="css/bootstrap.css">-->
-<!--    <link rel="stylesheet" href="css/style.css">-->
-<!--    <link rel="stylesheet" href="style.css">-->
-<!---->
-<!--</head>-->
-<!--<body>-->
+
 <?php
 
 
@@ -70,9 +54,7 @@ include_once('menu-sprawdzanie.php'); ?>
         </div>
         <div class="col-6 text-center center-block">
             <a href="wszystkie-kursy.php">
-                <!--                <button style="color:white;text-align:center;background-color: lightblue;" class="col-4 p-3">-->
-                <!--                    Wszystkie kursy-->
-                <!--                </button>-->
+
                 <button type="button" class="btn btn-primary btn-lg btn-block m-4">
                     Zobacz nasz sklep
                 </button>
@@ -80,9 +62,7 @@ include_once('menu-sprawdzanie.php'); ?>
         </div>
         <div class="col-3 text-center center-block">
             <a href="nasza-oferta.php">
-                <!--                <button style="color:white;text-align:center;background-color: lightblue;" class="col-4 p-3">-->
-                <!--                    Wszystkie kursy-->
-                <!--                </button>-->
+
                 <button type="button" class="btn btn-info btn-lg btn-block m-4">
                     Opis kursów
                 </button>
@@ -91,7 +71,7 @@ include_once('menu-sprawdzanie.php'); ?>
     </div>
 </div>
 <!-- div end -->
-<!--drivers-->
+<!--nauczyciel-->
 <section id="nauczyciel">
     <div class="container-fluid">
         <div class="row">
