@@ -80,3 +80,13 @@ nav li:hover {
     background-position: bottom;
     background-repeat: no-repeat;
  }
+.nav-link{
+    color: #3d3d3d !important;
+}
+.nav-link:hover{
+    color: black !important;
+}
+footer.main{
+    border-top:1px solid black;
+    padding-top: 10px
+}

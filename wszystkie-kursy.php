@@ -259,7 +259,7 @@ From kurs ORDER BY kurs.nazwa ASC";
 </div>
 </div>
 <br/>
-<?php include('footer.php'); ?>
+<?php include('footer2.php'); ?>
 <?php
 if (isset($_GET["action"])) {
     if ($_GET["action"] == "delete") {

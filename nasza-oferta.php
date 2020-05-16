@@ -75,7 +75,7 @@ include_once('menu-sprawdzanie.php'); ?>
 </div>
 <!-- div end -->
 
-<?php include('footer.php'); ?>
+<?php include('footer2.php'); ?>
 
 </body>
 </html>

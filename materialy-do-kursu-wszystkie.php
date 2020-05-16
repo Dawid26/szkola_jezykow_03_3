@@ -23,7 +23,9 @@ $query = "Select materialy_do_lekcji.materialy_do_lekcji_id,
        materialy_do_lekcji.link_lekcja_pdf ,
        materialy_do_lekcji.kurs_kurs_id
 From materialy_do_lekcji WHERE materialy_do_lekcji.kurs_kurs_id = '$kurs_link_id '";
-
+?>
+<div class="container">
+<?php
 $results = $db_connection->query($query);
 foreach ($results as $result) {
     ?>
@@ -41,5 +43,5 @@ foreach ($results as $result) {
     <?php
 }
 ?>
-<p></p></br><?php
+<p></p></br></div><?php
 include('footer.php');?>
