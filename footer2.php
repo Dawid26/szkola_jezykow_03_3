@@ -16,31 +16,17 @@
             <div class="col-md-3 mx-auto">
 
                 <!-- Links -->
-                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Kontakt</h5>
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-2">Kontakt</h5>
 
-                <ul class="list-unstyled">
+                <ul class="list-unstyled kontakt">
                     <li>
-                  Adres: Hallera 2212/22
+               <b> Adres: </b><br>Hallera 2212/22
                     </li>
                     <li>
-                 Telefon: 000 000 000
+                     Wrocław 22-222
                     </li>
-                </ul>
-
-            </div>
-            <!-- Grid column -->
-
-            <hr class="clearfix w-100 d-md-none">
-
-            <!-- Grid column -->
-            <div class="col-md-3 mx-auto">
-
-                <!-- Links -->
-                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Opinie</h5>
-
-                <ul class="list-unstyled">
                     <li>
-                        <a href="#!">Zobacz opinie naszych klientów</a>
+                     <b>  Telefon:</b>  000 000 000
                     </li>
 
                 </ul>
@@ -54,11 +40,11 @@
             <div class="col-md-3 mx-auto">
 
                 <!-- Links -->
-                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Oferta</h5>
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-2">Opinie</h5>
 
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#!">Zobacz naszą ofertę</a>
+                        <a href="lista-opinie-strona-glowna.php">Zobacz opinie naszych klientów</a>
                     </li>
 
                 </ul>
@@ -72,11 +58,32 @@
             <div class="col-md-3 mx-auto">
 
                 <!-- Links -->
-                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Sklep</h5>
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-2">Oferta</h5>
 
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#!">Przejdź do sklepu</a>
+                        <a href="nasza-oferta.php">Zobacz naszą ofertę</a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-3 mx-auto">
+
+                <!-- Links -->
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-2">Sklep</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="wszystkie-kursy.php">Przejdź do sklepu</a>
+                    </li>
+                    <li>
+                        <a href="index.php">Strona główna</a>
                     </li>
                 </ul>
 

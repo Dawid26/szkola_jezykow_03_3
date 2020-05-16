@@ -90,3 +90,9 @@ footer.main{
     border-top:1px solid black;
     padding-top: 10px
 }
+footer ul li{
+    padding-top: 2px;
+}
+footer .kontakt li{
+    padding-top: 5px;
+}

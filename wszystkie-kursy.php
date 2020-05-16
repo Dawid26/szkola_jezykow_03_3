@@ -101,6 +101,14 @@ if (isset($_GET["action"])) {
 <!--</head>-->
 
 <div class="container-fluid">
+    <div class="col-6 text-center center-block">
+        <a href="lista-opinie-strona-glowna.php">
+
+            <button type="button" class="btn btn-primary btn-lg btn-block m-4">
+                Zobacz wszystkie opinie
+            </button>
+        </a>
+    </div
     <br/>
     <br/>
     <br/>
@@ -119,7 +127,6 @@ From kurs ORDER BY kurs.nazwa ASC";
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_array($result)) {
             ?>
-
             <div class="col-12 col-sm-12 col-lg-6 col-xl-4">
                 <div class="card mb-4 box-shadow"
                      style="border:1.1px solid #555666; background-color:#f1f1f1; border-radius:5px;"
