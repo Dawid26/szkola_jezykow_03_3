@@ -16,8 +16,9 @@
         <!--        </div>-->
         <div class="row">
             <div class="text-center col-12">
-                <h6>Praca zaliczeniowa, bazy danych Dawid Mariankowski &copy; Copyright: <?php $year = date("Y");
-                    echo $year ?></h6>
+                <p>Praca zaliczeniowa, bazy danych Dawid Mariankowski &copy; Copyright: <?php $year = date("Y");
+                    echo $year ?></p>
+                <p>Wrocławska Wyższa Szkoła Informatyki Stosowanej "Horyzont"</p>
             </div>
         </div>
     </div>

@@ -26,7 +26,12 @@ if (isset($_POST['email'])) {
     $haslo1 = $_POST['haslo1'];
     $haslo2 = $_POST['haslo2'];
 
-    if ((strlen($haslo1) <= 3) || (strlen($haslo1) >= 20)) {
+    //Sprawdź poprawność nazwiska
+    $imie = $_POST['imie'];
+    $nazwisko = $_POST['nazwisko'];
+
+
+    if ((strlen($haslo1) < 3) || (strlen($haslo1) > 20)) {
         $wszystko_OK = false;
         $_SESSION['e_haslo'] = "Hasło musi posiadać od 3 do 20 znaków!";
     }
@@ -34,6 +39,17 @@ if (isset($_POST['email'])) {
     if ($haslo1 != $haslo2) {
         $wszystko_OK = false;
         $_SESSION['e_haslo'] = "Podane hasła nie są identyczne!";
+    }
+    //Sprawdź poprawność imienia
+    if ((strlen($imie) < 3) || (strlen($imie) > 15)) {
+        $wszystko_OK = false;
+        $_SESSION['e_imie'] = "Imię musi posiadać od 3 do 15 znaków!";
+    }
+
+    //Sprawdź poprawność nazwiska
+    if ((strlen($nazwisko) < 3) || (strlen($nazwisko) > 23)) {
+        $wszystko_OK = false;
+        $_SESSION['e_nazwisko'] = "Nazwisko musi posiadać od 3 do 23 znaków!";
     }
 
     $haslo_hash = password_hash($haslo1, PASSWORD_DEFAULT);
@@ -48,6 +64,8 @@ if (isset($_POST['email'])) {
     $_SESSION['fr_email'] = $email;
     $_SESSION['fr_haslo1'] = $haslo1;
     $_SESSION['fr_haslo2'] = $haslo2;
+    $_SESSION['fr_imie'] = $imie;
+    $_SESSION['fr_nazwisko'] = $nazwisko;
     if (isset($_POST['regulamin'])) $_SESSION['fr_regulamin'] = true;
 
     require_once "connectZ.php";
@@ -74,7 +92,7 @@ SELECT administrator.email FROM administrator WHERE email= '$email'");
             if ($wszystko_OK == true) {
                 // dodajemy  do bazy
 
-                if ($polaczenie->query("INSERT INTO student(email,haslo) VALUES ('$email', '$haslo_hash')")) {
+                if ($polaczenie->query("INSERT INTO student(email,haslo,imie,nazwisko) VALUES ('$email', '$haslo_hash','$imie','$nazwisko')")) {
                     $_SESSION['udanarejestracja'] = true;
                     header('Location: witamyZ.php');
                 } else {
@@ -87,8 +105,8 @@ SELECT administrator.email FROM administrator WHERE email= '$email'");
         }
 
     } catch (Exception $e) {
-        echo '<span style="color:red;">Błąd serwera! Przepraszamy za niedogodności i prosimy o rejestrację w innym terminie!</span>';
-        echo '<br />Informacja developerska: ' . $e;
+        echo '<span style="color:red;">Błąd serwera!</span>';
+        echo '<br />Informacja o błędzie: ' . $e;
     }
 
 }
@@ -130,15 +148,46 @@ SELECT administrator.email FROM administrator WHERE email= '$email'");
         }
         ?>
 
-        Powtórz hasło: <br/> <input type="password" value="<?php
+        Powtórz hasło: <br/>
+        <input type="password" value="<?php
         if (isset($_SESSION['fr_haslo2'])) {
             echo $_SESSION['fr_haslo2'];
             unset($_SESSION['fr_haslo2']);
         }
         ?>" name="haslo2"/><br/>
+<!--imie form-->
+        Imie: <br/> <input type="text" value="<?php
+        if (isset($_SESSION['fr_imie'])) {
+            echo $_SESSION['fr_imie'];
+            unset($_SESSION['fr_imie']);
+        }
+        ?>" name="imie"/><br/>
 
+        <?php
+        if (isset($_SESSION['e_imie'])) {
+            echo '<div class="error">' . $_SESSION['e_imie'] . '</div>';
+            unset($_SESSION['e_imie']);
+        }
+        ?>
+<!--end imie form-->
+        <!--nazwisko form-->
+        Nazwisko: <br/> <input type="text" value="<?php
+        if (isset($_SESSION['fr_nazwisko'])) {
+            echo $_SESSION['fr_nazwisko'];
+            unset($_SESSION['fr_nazwisko']);
+        }
+        ?>" name="nazwisko"/><br/>
+
+        <?php
+        if (isset($_SESSION['e_nazwisko'])) {
+            echo '<div class="error">' . $_SESSION['e_nazwisko'] . '</div>';
+            unset($_SESSION['e_nazwisko']);
+        }
+        ?>
+        <!--nazwisko  end-->
         <label>
-            <input type="checkbox" name="regulamin" <?php
+            <input type="checkbox" name="regulamin"
+                <?php
             if (isset($_SESSION['fr_regulamin'])) {
                 echo "checked";
                 unset($_SESSION['fr_regulamin']);
