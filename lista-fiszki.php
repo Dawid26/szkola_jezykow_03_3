@@ -1,35 +1,23 @@
 <?php
 require_once('config.php');
 include_once('menu-sprawdzanie-admin.php');
-
-$query = "Select
+$query = "SELECT
     fiszki.fiszki_id,
     fiszki.nazwa,
     fiszki.opis,
     fiszki.zdjecie,
     fiszki.wymowa,
     fiszki.kurs_kurs_id
-  From
-    fiszki";
-
-
+  FROM fiszki";
 $results = $db_connection->query($query);
-
-
 ?>
 <?php
-
-
 if (!isset($_SESSION['zalogowany'])) {
     header('Location: indexZ.php');
     exit();
 }
-
 ?>
-
-<?php //include('menu.php'); ?>
 <div class="container-fluid">
-    <!--    <table class="table ">-->
     <table class="table table-bordered table-responsive table-striped">
         <thead>
         <tr>
@@ -39,15 +27,12 @@ if (!isset($_SESSION['zalogowany'])) {
             <th>Opis</th>
             <th>Zdjecie</th>
             <th>Kurs_id</th>
-
             <th class="text-center">Edycja</th>
             <th class="text-center">Usuń</th>
-
         </tr>
         </thead>
         <tbody class="table-striped">
         <?php
-
         foreach ($results as $result) {
             ?>
             <tr>
@@ -68,8 +53,6 @@ if (!isset($_SESSION['zalogowany'])) {
         ?>
         </tbody>
     </table>
-
-
     <?php include('footer.php'); ?>
 </div>
 </body>

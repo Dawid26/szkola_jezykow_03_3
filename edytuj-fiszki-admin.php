@@ -16,14 +16,14 @@ if (!isset($_GET['id'])) {
         echo "id error2;";
         die();
     } else {
-        $query = "Select
+        $query = "SELECT
     fiszki.fiszki_id,
     fiszki.nazwa,
     fiszki.opis,
     fiszki.wymowa,
     fiszki.zdjecie,
     fiszki.kurs_kurs_id
-  From
+  FROM
     fiszki
 WHERE fiszki_id = :fiszki_id LIMIT 1";
         $result = $db_connection->prepare($query);
@@ -33,13 +33,9 @@ WHERE fiszki_id = :fiszki_id LIMIT 1";
 
         ]);
         $result = $result->fetch();
-//        print_r($result);
-//        print_r($id);
     }
 }
-
 ?>
-
 <br>
 <div class="container">
     <form method="post" action="akcje/aktualizuj-fiszki-admin.php">
@@ -59,7 +55,7 @@ WHERE fiszki_id = :fiszki_id LIMIT 1";
         <div class="form-group row">
             <label for="wymowa" class="col-sm-2 col-form-label">Wymowa</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="wymowa" name="wymowa" value="<?php echo '',($result['wymowa'] != 'NULL' ? $result['wymowa'] : ''); ?>">
+                <input type="text" class="form-control" id="wymowa" name="wymowa" value="<?php echo '',($result['wymowa'] = 'NULL' ? $result['wymowa'] : 'Null'); ?>">
             </div>
         </div>
         <div class="form-group row">
@@ -83,10 +79,7 @@ WHERE fiszki_id = :fiszki_id LIMIT 1";
                        value="<?php echo $result['kurs_kurs_id'] ?>">
             </div>
         </div>
-
-
-        <button type="submit" name="updateRecord" class="btn btn-success">Update Record</button>
-
+        <button type="submit" name="updateRecord" class="btn btn-success">Aktualizuj wartość</button>
     </form>
 </div>
 <?php include('footer.php'); ?>

@@ -195,11 +195,10 @@ From kurs ORDER BY kurs.nazwa ASC";
         <form method="post" action="">
             <table class="table table-bordered">
                 <tr>
-                    <th width="38%">Nazwa</th>
-                    <th width="11%">Ilość</th>
-                    <th width="8%">Kurs ID</th>
-                    <th width="22%">Cena</th>
-                    <th width="8%">Akcja</th>
+                    <th width="45%">Nazwa</th>
+                    <th width="6%">Kurs ID</th>
+                    <th width="10%">Cena</th>
+                    <th width="39%">Akcja</th>
                 </tr>
                 <?php
                 if (!empty($_SESSION["koszyk_karta"])) {
@@ -209,7 +208,6 @@ From kurs ORDER BY kurs.nazwa ASC";
 
                         <tr>
                             <td><?php echo $values["procukt_nazwa"]; ?></td>
-                            <td><?php echo $values["procukt_ilosc"]; ?></td>
                             <td><input type="number" name="number[kurs_id]" value="<?php echo $values["kurs_id"]; ?>"/>
                             </td>
                             <td>PLN <?php echo $values["procukt_cena"]; ?></td>
@@ -219,7 +217,7 @@ From kurs ORDER BY kurs.nazwa ASC";
                                             class="text-danger">Usuń z koszyka</span></a></td>
                         </tr>
                         <?php
-                        $cena_calkowita = $cena_calkowita + ($values["procukt_ilosc"] * $values["procukt_cena"]);
+                        $cena_calkowita = $cena_calkowita + $values["procukt_cena"];
                         $_SESSION["cena_calkowita"] = $cena_calkowita;
                     }
                     ?>

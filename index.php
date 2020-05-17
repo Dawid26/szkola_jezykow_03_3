@@ -1,11 +1,5 @@
-
 <?php
-
-
 include_once('menu-sprawdzanie.php'); ?>
-<?php //include('menu.php'); ?>
-
-<!-- navbar end -->
 <!-- header -->
 <header class="masthead" id="mainHeader">
     <div class="container h-100">
@@ -109,6 +103,5 @@ include_once('menu-sprawdzanie.php'); ?>
     </div>
 </section>
 <?php include('footer2.php'); ?>
-
 </body>
 </html>

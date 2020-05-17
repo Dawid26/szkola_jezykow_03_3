@@ -1,21 +1,14 @@
 <?php
 require_once('config.php');
-
 include_once('menu-sprawdzanie.php');
-//if(isset($POST['addRecord'])){
-
 $studentId = (filter_var($_GET['student_id'], FILTER_VALIDATE_INT));
 $kursId = (filter_var($_GET['kurs_id'], FILTER_VALIDATE_INT));
 if (isset($_POST['dodajOpinie'])) {
     $tytul = filter_var($_POST['tytul'], FILTER_SANITIZE_STRING);
     $opis = filter_var($_POST['opis'], FILTER_SANITIZE_STRING);
     $ocena = filter_var($_POST['ocena'], FILTER_SANITIZE_STRING);
-
-
-
     $query = "INSERT INTO opinia ( tytul, opis,ocena, data_wystawienia, student_student_id, kurs_kurs_id)
                        VALUES ( :tytul, :opis,:ocena, current_timestamp(), :studentId, :kursId)";
-
     $result = $db_connection->prepare($query);
     $result->execute([
         'tytul' => $tytul,
@@ -29,7 +22,7 @@ if (isset($_POST['dodajOpinie'])) {
         <script>
             window.setTimeout(function () {
                 window.location = 'index.php';
-            }, 10000);
+            }, 1000);
         </script>
         <p></p>
         <?php
@@ -38,12 +31,7 @@ if (isset($_POST['dodajOpinie'])) {
 } else {
     //echo "error";
 }
-
 ?>
-
-
-<?php //include('menu.php'); ?>
-
 <br>
 <div class="container">
     <form method="post" action="">
@@ -70,8 +58,5 @@ if (isset($_POST['dodajOpinie'])) {
     </form>
 </div>
 <?php include('footer.php'); ?>
-
 </body>
-
-
 </html>
