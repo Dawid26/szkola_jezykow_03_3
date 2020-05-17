@@ -19,16 +19,19 @@
                 <h5 class="font-weight-bold text-uppercase mt-3 mb-2">Kontakt</h5>
 
                 <ul class="list-unstyled kontakt">
-                    <li>
-               <b> Adres: </b><br>Hallera 2212/22
-                    </li>
-                    <li>
-                     Wrocław 22-222
-                    </li>
-                    <li>
-                     <b>  Telefon:</b>  000 000 000
-                    </li>
 
+                    <li>
+                        <b>  tel.</b>  000 000 000
+                    </li>
+                    <li>
+                        <b>  e-mail:</b>  szkola000@wroclaw.pl
+                    </li>
+                    <li>
+                        <b> </b><br>Hallera 2212/22
+                    </li>
+                    <li>
+                        Wrocław 22-222
+                    </li>
                 </ul>
 
             </div>
