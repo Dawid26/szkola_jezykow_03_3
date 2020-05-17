@@ -142,8 +142,8 @@ From kurs ORDER BY kurs.nazwa ASC";
                             <input type="hidden" name="ukryte_kurs_id" value="<?php echo $row["kurs_id"]; ?>"/>
                             <p>
                                 <input type="submit" name="dodaj_do_koszyka" style="margin-top:5px;"
-                                      class="btn btn-success"
-                                      value="Dodaj do koszyka"/>
+                                       class="btn btn-success"
+                                       value="Dodaj do koszyka"/>
                             </p>
                         </div>
                     </form>
@@ -160,8 +160,34 @@ From kurs ORDER BY kurs.nazwa ASC";
             </div>
             <?php
         }
-    }
-    ?>
+    } ?>
+    <!--//    premium start-->
+    <!--    <div class="col-12 col-sm-12 col-lg-6 col-xl-4">-->
+    <!--                <div class="card mb-4 box-shadow" style="border:1.1px solid #555666; background-color:#f1f1f1; border-radius:5px;" align="center">-->
+    <!--                    <form method="post" action="wszystkie-kursy.php?action=add&amp;id=23">-->
+    <!--                        <div class="card-body">-->
+    <!--                            <img src="zdjecia/nasza-oferta/wszystkie-kursy2.jpg" class="card-img-top"><br>-->
+    <!--                            <h4 class="card-text text-info">Kurs premium - wszystkie kursy + lekcje z nauczycielem</h4>-->
+    <!--                            <h4 class="card-text text-danger">PLN 280 / miesięcznie</h4>-->
+    <!--                            <!--						<input type="text" name="quantity" value="1" class="form-control" />-->
+    -->
+    <!---->
+    <!---->
+    <!--                        </div>-->
+    <!--                    </form>-->
+    <!--                    <p>-->
+    <!--                        <a style="color:white;" href="lista-opinie.php?id=23">-->
+    <!--                            <button type="submit" class="btn btn-primary mt-2 ml-1">-->
+    <!---->
+    <!--                                Opinie-->
+    <!---->
+    <!--                            </button>-->
+    <!--                        </a>-->
+    <!--                    </p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--//    premium end-->
+
     <div style="clear:both"></div>
     <br/>
     <h3>Szczegóły zamówienia</h3>
@@ -206,7 +232,6 @@ From kurs ORDER BY kurs.nazwa ASC";
                     <?php
                 }
                 ?>
-
             </table>
             <button name="dodaj_do_bazy" type="submit" class="btn btn-primary">Potwierdź zakupy</button>
         </form>
@@ -217,49 +242,32 @@ From kurs ORDER BY kurs.nazwa ASC";
                     ?><?php
                     $kurs_kurs_id = $values["kurs_id"];
                     $student_student_id = $_SESSION['student_id'];
-
-
                     $servername = "localhost";
                     $username = "dawidma1_113";
                     $password = "testmarian";
                     $dbname = "dawidma1_szkolajezykow114";
-
-// Create connection
                     $conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
                     if ($conn->connect_error) {
-                        die("Connection failed: " . $conn->connect_error);
+                        die("Błąd połączenia: " . $conn->connect_error);
                     }
-
                     $sql = "INSERT INTO student_has_kurs
      (kurs_kurs_id, student_student_id, ostatnia_wplata, data_utworzenia, ostatnia_naleznosc, odnawialny, oplacony)
          VALUES ('$kurs_kurs_id', '$student_student_id',NULL, current_timestamp(), NULL, 0, 0)";
-
                     if ($conn->query($sql) === TRUE) {
                         echo "";
                     } else {
                         echo "Error: " . $sql . "<br>" . $conn->error;
                     }
-
-
                     $conn->close();
-
                     if (isset($_SESSION['student_id'])) {
                         echo $_SESSION['student_id'];
                     }
-                    //   print_r($kurs_kurs_id, $student_student_id);
-//            echo '$kurs_kurs_id'. $kurs_kurs_id;
-//            echo '$student_student_id'. $student_student_id;
-
-
                 }
             }
 
         }
         if (isset($_POST["dodaj_do_koszyka"])) {
-
             echo '<script>window.scrollTo(150,document.body.scrollHeight);</script>';
-
         }
         ?>
     </div>
@@ -273,7 +281,6 @@ if (isset($_GET["action"])) {
         echo '<script>window.scrollTo(150,document.body.scrollHeight);</script>';
     }
 }
-
 ?>
 </body>
 </html>

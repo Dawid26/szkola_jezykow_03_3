@@ -42,7 +42,7 @@ if (isset($_POST['addRecord'])) {
         print_r($result);
     }
 } else {
-    echo "error";
+  //  echo "error";
 }
 
 ?>
