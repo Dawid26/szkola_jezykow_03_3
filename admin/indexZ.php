@@ -15,8 +15,10 @@ if ((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany'] == true)) {
 include('menu.php');
 ?>
 <br/><br/>
-
+<div class="logowanieRejestracja">
 <a href="rejestracja.php">Rejestracja - załóż konto</a>
+</div>
+<div class="logowanie">
 <br/><br/>
 
 <form action="zaloguj.php" method="post" class="col-6 center">
@@ -26,7 +28,7 @@ include('menu.php');
     <input type="submit" value="Zaloguj się" class="btn btn-primary"/>
 
 </form>
-
+</div>
 <!--<form>-->
 <!--    <div class="form-group">-->
 <!--        <label for="exampleInputEmail1">Email address</label>-->

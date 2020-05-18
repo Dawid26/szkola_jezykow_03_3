@@ -116,11 +116,11 @@ SELECT administrator.email FROM administrator WHERE email= '$email'");
 
 
 <?php //include ('menu.php'); ?>
-<div class="rejestracja">
+<div class="rejestracja student">
     <form method="post">
 
 
-        E-mail: <br/> <input type="text" value="<?php
+        E-mail: <br/> <input class="inputRejestracja"  type="text" value="<?php
         if (isset($_SESSION['fr_email'])) {
             echo $_SESSION['fr_email'];
             unset($_SESSION['fr_email']);
@@ -134,7 +134,7 @@ SELECT administrator.email FROM administrator WHERE email= '$email'");
         }
         ?>
 
-        Twoje hasło: <br/> <input type="password" value="<?php
+        Twoje hasło: <br/> <input class="inputRejestracja"  type="password" value="<?php
         if (isset($_SESSION['fr_haslo1'])) {
             echo $_SESSION['fr_haslo1'];
             unset($_SESSION['fr_haslo1']);
@@ -149,14 +149,14 @@ SELECT administrator.email FROM administrator WHERE email= '$email'");
         ?>
 
         Powtórz hasło: <br/>
-        <input type="password" value="<?php
+        <input class="inputRejestracja"  type="password" value="<?php
         if (isset($_SESSION['fr_haslo2'])) {
             echo $_SESSION['fr_haslo2'];
             unset($_SESSION['fr_haslo2']);
         }
         ?>" name="haslo2"/><br/>
 <!--imie form-->
-        Imie: <br/> <input type="text" value="<?php
+        Imię: <br/> <input class="inputRejestracja"  type="text" value="<?php
         if (isset($_SESSION['fr_imie'])) {
             echo $_SESSION['fr_imie'];
             unset($_SESSION['fr_imie']);
@@ -171,7 +171,7 @@ SELECT administrator.email FROM administrator WHERE email= '$email'");
         ?>
 <!--end imie form-->
         <!--nazwisko form-->
-        Nazwisko: <br/> <input type="text" value="<?php
+        Nazwisko: <br/> <input class="inputRejestracja"  type="text" value="<?php
         if (isset($_SESSION['fr_nazwisko'])) {
             echo $_SESSION['fr_nazwisko'];
             unset($_SESSION['fr_nazwisko']);

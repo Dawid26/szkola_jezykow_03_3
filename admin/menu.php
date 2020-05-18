@@ -37,11 +37,11 @@
                     Logowanie
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="../zaloguj.php">Zaloguj się</a>
+                    <a class="dropdown-item" href="zaloguj.php">Zaloguj się</a>
 
 
-                    <a class="dropdown-item" href="../logoutZ.php">Wyloguj</a>
-                    <a class="dropdown-item" href="../rejestracja.php">Rejestracja</a>
+                    <a class="dropdown-item" href="logout.php">Wyloguj</a>
+                    <a class="dropdown-item" href="rejestracja.php">Rejestracja</a>
                 </div>
 
             </li>

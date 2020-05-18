@@ -109,10 +109,11 @@ SELECT administrator.email, administrator.administrator_id FROM administrator WH
 <!---->
 <!--<body>-->
 <?php include('menu.php'); ?>
+<div class="logowanie">
 <form method="post">
 
 
-    E-mail: <br/> <input type="text" value="<?php
+    E-mail: <br/> <input class="inputRejestracja"  type="text" value="<?php
     if (isset($_SESSION['fr_email'])) {
         echo $_SESSION['fr_email'];
         unset($_SESSION['fr_email']);
@@ -126,7 +127,7 @@ SELECT administrator.email, administrator.administrator_id FROM administrator WH
     }
     ?>
 
-    Twoje hasło: <br/> <input type="password" value="<?php
+    Twoje hasło: <br/> <input class="inputRejestracja"  type="password" value="<?php
     if (isset($_SESSION['fr_haslo1'])) {
         echo $_SESSION['fr_haslo1'];
         unset($_SESSION['fr_haslo1']);
@@ -140,7 +141,7 @@ SELECT administrator.email, administrator.administrator_id FROM administrator WH
     }
     ?>
 
-    Powtórz hasło: <br/> <input type="password" value="<?php
+    Powtórz hasło: <br/> <input class="inputRejestracja"  type="password" value="<?php
     if (isset($_SESSION['fr_haslo2'])) {
         echo $_SESSION['fr_haslo2'];
         unset($_SESSION['fr_haslo2']);
@@ -148,7 +149,7 @@ SELECT administrator.email, administrator.administrator_id FROM administrator WH
     ?>" name="haslo2"/><br/>
 
     <label>
-        <input type="checkbox" name="regulamin" <?php
+        <input class="inputRejestracja"  type="checkbox" name="regulamin" <?php
         if (isset($_SESSION['fr_regulamin'])) {
             echo "checked";
             unset($_SESSION['fr_regulamin']);
@@ -165,9 +166,10 @@ SELECT administrator.email, administrator.administrator_id FROM administrator WH
 
     <br/>
 
-    <input type="submit" value="Zarejestruj się"/>
+    <input class="przyciskrejestracja" type="submit" value="Zarejestruj się"/>
 
 </form>
+</div>
 <?php include('footer.php'); ?>
 </body>
 </html>
