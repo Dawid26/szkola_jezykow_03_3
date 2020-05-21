@@ -64,7 +64,7 @@ FROM student_has_kurs INNER JOIN
                         </p>
                         <p class="card-text"><b>oplacony:
                                 <?php echo ' ' . ((int)$result['oplacony'] ? (int)$result['oplacony'] : 'Nie') . ''; ?>
-                        </p></b>
+                            </b></p>
                         <p class="card-text"><b>Pozostało do zapacenia:
                                 <?php echo ' ' . (!(int)$result['oplacony'] ? $result['cena'] : 'Brak zadłużenia') . ''; ?>
                             </b> </p>
