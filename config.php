@@ -21,7 +21,8 @@ $db_host = 'localhost';
 $db_name = 'dawidma1_szkolajezykow114';
 $db_username = 'dawidma1_113';
 $db_password = 'testmarian';
+$char_collation = 'utf8_general_ci';
 //create the Data Source Name
-$dsn = "mysql:host=$db_host;dbname=$db_name";
+$dsn = "mysql:host=$db_host;dbname=$db_name;charset=UTF8";
 //connect to the database
 $db_connection = new PDO($dsn, $db_username, $db_password);

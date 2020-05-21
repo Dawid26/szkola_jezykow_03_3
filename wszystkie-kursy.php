@@ -29,7 +29,11 @@ if (isset($_SESSION['uprawnienia'])) {
 if (isset($_SESSION['uprawnienia'])) {
 
 }
+$char_set = 'utf8';
+$char_collation = 'utf8_general_ci';
 $connect = mysqli_connect("localhost", "dawidma1_113", "testmarian", "dawidma1_szkolajezykow114");
+$connect ->set_charset("utf8");
+
 //if(isset($_POST["dodaj_do_bazy"]))
 //{
 //

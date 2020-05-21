@@ -21,7 +21,7 @@ include('menu.php');
 <div class="logowanie">
 <br/><br/>
 
-<form action="zaloguj.php" method="post" class="col-6 center">
+<form action="zaloguj.php" method="post" class="col-4 center">
 
     Login: <br/> <input type="text" name="login" class="form-control"/> <br/>
     Hasło: <br/> <input type="password" name="haslo" class="form-control"/> <br/><br/>

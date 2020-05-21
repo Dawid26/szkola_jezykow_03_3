@@ -116,3 +116,7 @@ footer .kontakt li{
     margin: 0 auto;
     max-width:300px;
 }
+.logowanie form,
+.logowanieRejestracja form{
+    text-align: center;
+}
