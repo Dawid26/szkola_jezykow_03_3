@@ -67,8 +67,9 @@ FROM student_has_kurs INNER JOIN
                         <p class="card-text">Oplacony:<b>
                                 <?php echo ' ' . ((int)$result['oplacony'] ? 'Tak' : 'Nie') . ''; ?>
                             </b></p>
-                        <p class="card-text">Pozostało do zapacenia:<b>
-                                <?php echo ' ' . (!(int)$result['oplacony'] ? $result['cena'] : 'Brak zadłużenia') . ''; ?>
+                        <p class="card-text"><b>
+                                <?php echo ' ' . (!(int)$result['oplacony'] ? 'Pozostało '.$result['cena'].'zł do zapłacenia' :
+                                        'Kurs został już opłacony') . ''; ?>
                                 <?php if((int)$result['oplacony']){}else{$cenaCalkowita += $result['cena'];} ?>
                             </b></p>
                         <p>
@@ -101,7 +102,8 @@ FROM student_has_kurs INNER JOIN
     </p>
     <p>
         <?php
-        echo ' <p>Dziękujemy za zakupy, twój adres email  to: <b>' . (isset($_SESSION['email']) ?  $_SESSION['email'] .'</p>': ' ' . 'nieznajomy');
+        echo ' <p>Dziękujemy za zakupy, twój adres email  to: <b>'
+            . (isset($_SESSION['email']) ?  $_SESSION['email'] .'</p>': ' ' . 'nieznajomy');
         echo ' ' . ($_SESSION["uprawnienia"] ? "</b><p>Uprawnienia:<b> " . $_SESSION['uprawnienia'] .'</p>': ' ' . 'Brak danych');
         ?>
         </b></p>
