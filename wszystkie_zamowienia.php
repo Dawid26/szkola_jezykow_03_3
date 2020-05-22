@@ -15,7 +15,7 @@ if ($zalogowany) {
     $nazwisko = $_SESSION['nazwisko'];
     $uprawnienia = $_SESSION['uprawnienia'];
 }
-if(isset($_SESSION['calkowitaKwotaDoZaplaty'])){
+if (isset($_SESSION['calkowitaKwotaDoZaplaty'])) {
 }
 $studentId = $_SESSION['student_id'];
 $query = "SELECT kurs.cena,
@@ -46,6 +46,7 @@ FROM student_has_kurs INNER JOIN
         </div>
         <?php
         $results = $db_connection->query($query);
+        $cenaCalkowita = 0;
         foreach ($results as $result) {
             ?>
             <div class="col-md-4">
@@ -54,6 +55,7 @@ FROM student_has_kurs INNER JOIN
                         <p class="card-text">nazwa:<b> <?php echo $result['nazwa'] ?></b></p>
                         <p class="card-text">Kurs id: <?php echo $result['kurs_kurs_id'] ?></p>
                         <p class="card-text">Cena: <?php echo $result['cena'] ?></p>
+
                         <p class="card-text">Ostatnia wplata:
                             <?php echo ' ' . ((int)$result['ostatnia_wplata'] ? $result['ostatnia_wplata'] : ' ' . 'Brak'); ?>
                         </p>
@@ -67,7 +69,14 @@ FROM student_has_kurs INNER JOIN
                             </b></p>
                         <p class="card-text"><b>Pozostało do zapacenia:
                                 <?php echo ' ' . (!(int)$result['oplacony'] ? $result['cena'] : 'Brak zadłużenia') . ''; ?>
-                            </b> </p>
+                                <?php
+                                if((int)$result['oplacony']){
+
+                                }else{
+                                    $cenaCalkowita += $result['cena'];
+                                }
+                                ?>
+                            </b></p>
                         <p>
                             <a style="color:white;" href="dodaj-opinie.php?kurs_id=<?php echo $result['kurs_kurs_id'] ?>
                                &amp;student_id=<?php echo $studentId ?>">
@@ -82,9 +91,29 @@ FROM student_has_kurs INNER JOIN
             </div>
             <?php
         }
+
         ?>
     </div>
-    <p></p></br><?php
+<div class="container">
+    <p>
+       <b>W tytule przelewu prodać email studenta oraz id kursu.</b>
+    </p>
+    <p>
+       <b>Numer Konta: 0000 1111 0000 1111 0000 1111</b>
+    </p>
+    <p>
+        Pozostało do zapaty:<b> <?php     echo  $cenaCalkowita;?></b>
+    </p>
+    <p>
+        <?php
+        echo ' <p>Dziękujemy za zakupy, twój adres email  to: <b>' . (isset($_SESSION['email']) ?  $_SESSION['email'] .'</p>': ' ' . 'nieznajomy');
+        echo ' ' . ($_SESSION["uprawnienia"] ? "</b><p>Uprawnienia:<b> " . $_SESSION['uprawnienia'] .'</p>': ' ' . 'Brak danych');
+        ?>
+        </b></p>
+
+</div>
+    </br><?php
 include('footer.php');
 $polaczenie->close();
+include('zalogowany.php');
 ?>

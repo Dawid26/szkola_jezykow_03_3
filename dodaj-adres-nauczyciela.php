@@ -113,7 +113,7 @@ From
 
     $results2 = $db_connection->query($query2);
     ?>
-    <?php include('footer.php'); ?>
+
     <table class="table">
         <thead>
         <tr>
@@ -137,6 +137,6 @@ From
     </table>
 </div>
 </body>
-
-
 </html>
+<?php include('footer.php'); ?>
+<?php include('zalogowany.php'); ?>

@@ -62,6 +62,6 @@ foreach ($results as $result) {
 
 <p></p></br><?php
 include('footer.php');
-
+include('zalogowany.php');
 $polaczenie->close();
 ?>

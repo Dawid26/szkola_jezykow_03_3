@@ -88,3 +88,4 @@ if (isset($_POST['addRecord'])) {
 
 
 </html>
+<?php include('zalogowany.php'); ?>

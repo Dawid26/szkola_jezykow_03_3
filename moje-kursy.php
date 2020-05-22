@@ -73,4 +73,5 @@ foreach ($results as $result) {
 <?php
 include('footer.php');
 $polaczenie->close();
+include('zalogowany.php');
 ?>

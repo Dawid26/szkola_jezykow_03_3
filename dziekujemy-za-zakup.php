@@ -30,9 +30,9 @@ include_once('menu-sprawdzanie.php');
 <?php
 //$sql = "SEKECT * FROM student WHERE email='$akcje' AND haslo='$haslo'";
 //echo "<p>Dziękujemy za zakup kursu " . isset($_SESSION['email']) . '  <a href="logoutZ.php">  Wyloguj się!</a> </p>';
-echo ' <p>Dziękujemy za zakup kursu' . (isset($_SESSION['email']) ?  $_SESSION['email'] .'</p>': ' ' . 'nieznajomy');
+echo ' <p>Dziękujemy za zakup kursu, twój email to:' . (isset($_SESSION['email']) ?  $_SESSION['email'] .'</p>': ' ' . 'nieznajomy');
 echo ' ' . ($_SESSION["uprawnienia"] ? "<p><b>Uprawnienia:</b> " . $_SESSION['uprawnienia'] .'</p>': ' ' . 'Brak danych');
-echo ' ' . (isset($_SESSION["cena_calkowita"]) ? "<p><b>Kwota do zapłaty za ostatnie zakupy to :</b> " . $_SESSION["cena_calkowita"] .'</p>' : '<b>Kwota do zapłaty za ostatnie zakupy to :</b> ' . 'Brak danych');
+//echo ' ' . (isset($_SESSION["cena_calkowita"]) ? "<p><b>Kwota do zapłaty za ostatnie zakupy to :</b> " . $_SESSION["cena_calkowita"] .'</p>' : '<b>Kwota do zapłaty za ostatnie zakupy to :</b> ' . 'Brak danych');
 echo "<p><b>Numer Konta: 0000 1111 0000 1111 0000 1111</b> ";
 unset($_SESSION["koszyk_karta"]);
 //   echo "<p>Ja " .$_SESSION['student'].'</p>'

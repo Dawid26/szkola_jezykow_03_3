@@ -76,3 +76,4 @@ From kurs ";
 include('footer.php');
 
 ?>
+<?php include('zalogowany.php'); ?>

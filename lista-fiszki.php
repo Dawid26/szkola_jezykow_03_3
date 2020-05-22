@@ -57,3 +57,4 @@ if (!isset($_SESSION['zalogowany'])) {
 </div>
 </body>
 </html>
+<?php include('zalogowany.php'); ?>

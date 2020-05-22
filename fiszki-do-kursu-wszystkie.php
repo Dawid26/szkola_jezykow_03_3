@@ -44,5 +44,5 @@ $results = $db_connection->query($query);
 </div>
 <p></p></br><?php
 include('footer.php');
-
+include('zalogowany.php');
 ?>
