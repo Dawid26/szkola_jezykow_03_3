@@ -30,4 +30,8 @@ if ((isset($_SESSION['zalogowany']))) {
         include_once('menu-nauczyciel.php');
     }
 
+}else {
+    include_once('menu-start.php');
+//    header('Location: http://localhost/szkola_jezykow_03_3');
+//    exit;
 }
