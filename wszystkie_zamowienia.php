@@ -52,7 +52,7 @@ FROM student_has_kurs INNER JOIN
             <div class="col-md-4">
                 <div class="card mb-4 box-shadow">
                     <div class="card-body">
-                        <p class="card-text">nazwa:<b> <?php echo $result['nazwa'] ?></b></p>
+                        <b> <p class="card-text">Nazwa: <?php echo $result['nazwa'] ?></b></p>
                         <p class="card-text">Kurs id: <?php echo $result['kurs_kurs_id'] ?></p>
                         <p class="card-text">Cena: <?php echo $result['cena'] ?></p>
 
@@ -61,21 +61,15 @@ FROM student_has_kurs INNER JOIN
                         </p>
                         <p class="card-text">Data zamówienia: <?php echo $result['data_utworzenia'] ?></p>
 
-                        <p class="card-text">odnawialny:
+                        <p class="card-text">Odnawialny:
                             <?php echo ' ' . ((int)$result['odnawialny'] ? (int)$result['odnawialny'] : ' ' . 'Nie'); ?>
                         </p>
-                        <p class="card-text"><b>oplacony:
-                                <?php echo ' ' . ((int)$result['oplacony'] ? (int)$result['oplacony'] : 'Nie') . ''; ?>
+                        <p class="card-text">Oplacony:<b>
+                                <?php echo ' ' . ((int)$result['oplacony'] ? 'Tak' : 'Nie') . ''; ?>
                             </b></p>
-                        <p class="card-text"><b>Pozostało do zapacenia:
+                        <p class="card-text">Pozostało do zapacenia:<b>
                                 <?php echo ' ' . (!(int)$result['oplacony'] ? $result['cena'] : 'Brak zadłużenia') . ''; ?>
-                                <?php
-                                if((int)$result['oplacony']){
-
-                                }else{
-                                    $cenaCalkowita += $result['cena'];
-                                }
-                                ?>
+                                <?php if((int)$result['oplacony']){}else{$cenaCalkowita += $result['cena'];} ?>
                             </b></p>
                         <p>
                             <a style="color:white;" href="dodaj-opinie.php?kurs_id=<?php echo $result['kurs_kurs_id'] ?>
@@ -95,11 +89,12 @@ FROM student_has_kurs INNER JOIN
         ?>
     </div>
 <div class="container">
+    <h2>Dane do przelewu</h2>
     <p>
        <b>W tytule przelewu prodać email studenta oraz id kursu.</b>
     </p>
     <p>
-       <b>Numer Konta: 0000 1111 0000 1111 0000 1111</b>
+       Numer Konta: 0000 1111 0000 1111 0000 1111
     </p>
     <p>
         Pozostało do zapaty:<b> <?php     echo  $cenaCalkowita;?></b>

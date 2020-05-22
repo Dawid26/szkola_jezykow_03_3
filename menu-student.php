@@ -59,7 +59,6 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <!--                    <a class="nav-link" href="moje-fiszki.php">Moje fiszki</a>-->
                     <a class="nav-link" href="moje-kursy.php">Moje kursy </a>
-                    <a class="nav-link" href="dziekujemy-za-zakup.php">Ostatnie Zamówienie</a>
                     <a class="nav-link" href="wszystkie_zamowienia.php">Wszystkie Zamówienia</a>
 
 
