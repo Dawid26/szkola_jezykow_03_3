@@ -13,9 +13,9 @@ if (!isset($_POST['updateRecord'])) {
         die();
     } else {
         $id = filter_var($_POST['id'], FILTER_SANITIZE_NUMBER_INT);
-        $nazwa = filter_var($_POST['nazwa']);
-        $opis = filter_var($_POST['opis']);
-        $wymowa = filter_var($_POST['wymowa']);
+        $nazwa = filter_var($_POST['nazwa'], FILTER_SANITIZE_STRING);
+        $opis = filter_var($_POST['opis'], FILTER_SANITIZE_STRING);
+        $wymowa = filter_var($_POST['wymowa'], FILTER_SANITIZE_STRING);
         $zdjecie = filter_var($_POST['zdjecie'], FILTER_SANITIZE_STRING);
         $kurs_kurs_id = filter_var($_POST['kurs_kurs_id'], FILTER_SANITIZE_STRING);
         $query =
