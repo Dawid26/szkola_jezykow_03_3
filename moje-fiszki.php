@@ -34,6 +34,7 @@ $query = "Select fiszki.fiszki_id,
        fiszki.nazwa ,
        fiszki.opis ,
        fiszki.zdjecie ,
+       fiszki.wymowa ,
        fiszki.kurs_kurs_id,
        student_has_kurs.kurs_kurs_id,
        student_has_kurs.student_student_id
@@ -54,7 +55,8 @@ $results = $db_connection->query($query);
                 <div class="card mb-4 box-shadow">
                     <img class="card-img-top" src="<?php echo $result['zdjecie'] ?>">
                     <div class="card-body">
-                        <p class="card-text"><?php echo $result['nazwa'] ?></p>
+                        <p class="card-text"><b><?php echo $result['nazwa'] ?></b></p>
+                        <p class="card-text"><b><?php echo $result['wymowa'] ?></b></p>
                         <p class="card-text"><?php echo $result['opis'] ?></p>
 
                     </div>

@@ -30,8 +30,8 @@ $results = $db_connection->query($query);
                 <div class="card mb-4 box-shadow">
                     <img class="card-img-top" src="<?php echo $result['zdjecie'] ?>">
                     <div class="card-body">
-                        <p class="card-text"><?php echo $result['nazwa'] ?></p>
-                        <p class="card-text"><?php echo $result['wymowa'] ?></p>
+                        <p class="card-text"><b><?php echo $result['nazwa'] ?></b></p>
+                        <p class="card-text"><b><?php echo $result['wymowa'] ?></b></p>
                         <p class="card-text"><?php echo $result['opis'] ?></p>
                     </div>
                 </div>
