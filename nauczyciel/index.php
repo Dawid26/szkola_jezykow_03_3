@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title></title>
 </head>
 <body>
-<h1>Hello, world!</h1>
+<h1></h1>
 <script>
     //window.location = "http://localhost/szkola_jezykow_03_3/nauczyciel/indexZ.php";
     window.location = "http://localhost/szkola_jezykow_03_3/nauczyciel/indexZ.php";
