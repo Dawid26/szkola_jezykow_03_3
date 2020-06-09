@@ -21,7 +21,7 @@ if (isset($_POST['dodaj_materialy_do_lekcji'])) {
         'kurs_kurs_id' => $kurs_kurs_id,
     ]);
     if ($result) {
-        echo "działa"; ?>
+//        echo "działa"; ?>
         <script>
             window.setTimeout(function () {
                 window.location = 'materialy-do-lekcji.php';
@@ -29,10 +29,10 @@ if (isset($_POST['dodaj_materialy_do_lekcji'])) {
         </script>
         <p></p>
         <?php
-        print_r($result);
+//        print_r($result);
     }
 } else {
-    echo "error";
+//    echo "error";
 }
 
 ?>
@@ -56,13 +56,13 @@ if (isset($_POST['dodaj_materialy_do_lekcji'])) {
             </div>
         </div>
         <div class="form-group row">
-            <label for="link_lekcja_pdf" class="col-sm-2 col-form-label">link_lekcja_pdf</label>
+            <label for="link_lekcja_pdf" class="col-sm-2 col-form-label">Link_lekcja_pdf</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" id="link_lekcja_pdf" name="link_lekcja_pdf" value="">
             </div>
         </div>
         <div class="form-group row">
-            <label for="kurs_kurs_id" class="col-sm-2 col-form-label">kurs_kurs_id</label>
+            <label for="kurs_kurs_id" class="col-sm-2 col-form-label">Kurs id</label>
             <div class="col-sm-10">
                 <input type="number" class="form-control" id="kurs_kurs_id" name="kurs_kurs_id" value="">
             </div>

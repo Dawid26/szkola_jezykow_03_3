@@ -3,14 +3,14 @@ require_once('config.php');
 include_once('menu-sprawdzanie-admin.php');
 if (!isset($_GET['id'])) {
     //    header('Location:index.php');
-    echo "error1";
+//    echo "error1";
     die();
 } else {
     $id = (filter_var($_GET['id'], FILTER_VALIDATE_INT));
-    print_r($id);
+//    print_r($id);
     if (!$id) {
         // header('Location:lista-studenci.php');
-        echo "error2";
+//        echo "error2";
         die();
     } else {
         $query = "Select student_adres.miasto,

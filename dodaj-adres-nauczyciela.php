@@ -35,7 +35,7 @@ if (isset($_POST['addRecord'])) {
         'nauczyciel_nauczyciel_id' => $nauczyciel_nauczyciel_id
     ]);
     if ($result) {
-        echo "działa"; ?>
+//        echo "działa"; ?>
         <script>
             window.setTimeout(function () {
                 window.location = 'lista-nauczyciele2.php';
@@ -43,10 +43,10 @@ if (isset($_POST['addRecord'])) {
         </script>
         <p></p>
         <?php
-        print_r($result);
+//        print_r($result);
     }
 } else {
-    echo "error";
+//    echo "error";
 }
 
 ?>

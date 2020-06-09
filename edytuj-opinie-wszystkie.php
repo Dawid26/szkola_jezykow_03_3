@@ -7,15 +7,15 @@ include_once('menu-sprawdzanie.php');
 
 if (!isset($_GET['id'])) {
     //    header('Location:index.php');
-    echo "id error1;";
+//    echo "id error1;";
     die();
 } else {
 
  $id = (filter_var($_GET['id'], FILTER_VALIDATE_INT));
-    echo 'id' . $id ;
+//    echo 'id' . $id ;
     if (!$id) {
         // header('Location:lista-studenci.php');
-        echo "id error2;";
+//        echo "id error2;";
         die();
     } else {
         $query = "Select opinia.tytul,

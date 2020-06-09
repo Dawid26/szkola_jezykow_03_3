@@ -10,7 +10,7 @@ if (!isset($_GET['id'])) {
 } else {
 
     $id = (filter_var($_GET['id'], FILTER_VALIDATE_INT));
-    print_r($id);
+//    print_r($id);
     if (!$id) {
         echo "id error2;";
         die();

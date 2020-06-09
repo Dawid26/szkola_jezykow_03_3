@@ -26,14 +26,14 @@ WHERE kategoria_id = :kategoria_id LIMIT 1";
 
         ]);
         $result = $result->fetch();
-        print_r($result);
-        print_r($id);
+//        print_r($result);
+//        print_r($id);
     }
 }
 
 ?>
 
-<?php include('menu.php'); ?>
+<?php //include('menu.php'); ?>
 
 <br>
 <div class="container">

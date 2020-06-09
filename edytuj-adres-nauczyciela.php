@@ -6,7 +6,7 @@ if (!isset($_GET['id'])) {
     die();
 } else {
     $id = (filter_var($_GET['id'], FILTER_VALIDATE_INT));
-    print_r($id);
+//    print_r($id);
 
     if (!$id) {
         header('Location:lista-studenci.php');

@@ -35,7 +35,7 @@ WHERE kurs_id = :kurs_id LIMIT 1";
     }
 }
 
-echo $id; ?>
+//echo $id; ?>
 
 
 <br>
