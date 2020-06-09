@@ -6,7 +6,7 @@ include_once('menu-sprawdzanie.php'); ?>
         <div class="row h-100 align-items-center">
             <div class="col-12 text-center">
                 <a href="#nauczyciele" style="color:white;text-align:center;">
-                    <button class="col-4 p-4">
+                    <button class="col-xl-4 p-4">
                         Poznaj nas
                     </button>
                 </a>
@@ -16,7 +16,7 @@ include_once('menu-sprawdzanie.php'); ?>
 </header>
 <!-- header end -->
 <!-- div-->
-<div id="naszaMetoda">
+<div  class="text-center center-block" id="naszaMetoda">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -24,21 +24,21 @@ include_once('menu-sprawdzanie.php'); ?>
             </div>
         </div>
         <div class="row d-flex justify-content-center p-4">
-            <div class="col-4">
+            <div class="col-12 col-sm-12 col-lg-6 col-xl-4 mt-4">
                 <div class="card">
                     <img src="assets/new/kurs-niemieckiego.jpg" alt="niemcy">
                     <h3>Niemiecki</h3>
                     <p>Kurs niemieckiego </p>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-sm-12 col-lg-6 col-xl-4 mt-4">
                 <div class="card">
                     <img src="assets/new/kurs-angielskiego.jpg" alt="niemcy">
                     <h3>Angielski</h3>
                     <p>Kurs angielskiego </p>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-sm-12 col-lg-6 col-xl-4 mt-4">
                 <div class="card">
                     <img src="assets/new/niemiecki-dla-informatykow-2.jpg" alt="niemcy">
                     <h3>Niemiecki dla informatyków</h3>
@@ -46,21 +46,24 @@ include_once('menu-sprawdzanie.php'); ?>
                 </div>
             </div>
         </div>
-        <div class="col-6 text-center center-block">
-            <a href="wszystkie-kursy.php">
+        <div class=" col-12 center-block text-center row d-flex justify-content-center p-4">
+          <div class="col-lg-8 col-12  text-center center-block ">
+            <a  class="text-center center-block" href="wszystkie-kursy.php">
 
-                <button type="button" class="btn btn-primary btn-lg btn-block m-4">
+                <button type="button" class="  btn btn-primary btn-lg btn-block mt-4">
                     Zobacz nasz sklep
                 </button>
-            </a>
-        </div>
-        <div class="col-3 text-center center-block">
-            <a href="nasza-oferta.php">
+             </a>
+            </div>
+            <div class="col-lg-8 col-12  text-center center-block">
+            <a  class="text-center center-block" href="nasza-oferta.php">
 
-                <button type="button" class="btn btn-info btn-lg btn-block m-4">
+<!--                <button type="button" class="  btn btn-info btn-lg btn-block m-4">-->
+                <button type="button" class="btn btn-secondary btn-lg btn-block mt-4">
                     Opis kursów
                 </button>
             </a>
+          </div>
         </div>
     </div>
 </div>
@@ -75,29 +78,29 @@ include_once('menu-sprawdzanie.php'); ?>
             </div>
         </div>
         <div class="row d-flex justify-content-center">
-            <div class="col-3 m-3">
+            <div class=" col-sm-12 col-lg-3 m-3">
                 <div class="avatar mx-auto">
                     <img src="assets/new/nauczyciel-angielskiego-Radek.jpg" class="w-100 rounded-circle"
                          alt="niemiecki">
                 </div>
                 <h3 class="font-weight-bold mt-3 mb-3 text-center ">Radek</h3>
-                <p class="">Nasz nowy i kreatywny nauczyciel angielskiego w informatyce</p>
+                <p class="text-center">Nasz nowy i kreatywny nauczyciel angielskiego w informatyce</p>
             </div>
-            <div class="col-3 m-3">
+            <div class=" col-sm-12 col-lg-3  m-3">
                 <div class="avatar mx-auto">
                     <img src="assets/new/nauczycielka-niemieckiego-agnieszka.jpg" class="w-100 rounded-circle"
                          alt="niemiecki">
                 </div>
                 <h3 class="font-weight-bold mt-3 mb-3 text-center ">Agnieszka</h3>
-                <p class="">Nasza nauczycielka angielskiego z pięcioletnim doświadczeniem</p>
+                <p class="text-center">Nasza nauczycielka angielskiego z pięcioletnim doświadczeniem</p>
             </div>
-            <div class="col-3 m-3">
+            <div class=" col-sm-12 col-lg-3  m-3">
                 <div class="avatar mx-auto">
                     <img src="assets/new/nauczyciel-niemieckiego-dla-informatykow.jpg" class="w-100 rounded-circle"
                          alt="niemiecki">
                 </div>
                 <h3 class="font-weight-bold mt-3 mb-3 text-center">Zbigniew</h3>
-                <p class="">Nasz nauczyciel nauczyciel niemieckiego dla informatykow</p>
+                <p class="text-center">Nasz nauczyciel nauczyciel niemieckiego dla informatykow</p>
             </div>
         </div>
     </div>

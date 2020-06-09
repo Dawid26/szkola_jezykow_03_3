@@ -61,7 +61,7 @@
                     <a class="dropdown-item" href="../dodaj-studenta.php">Dodaj Użytkownika</a>
                     <a class="dropdown-item" href="#">Zamówienia Studentów</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Wyszukaj Użytkownika</a>
+                   <!-- <a class="dropdown-item" href="#">Wyszukaj Użytkownika</a> -->
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -73,7 +73,7 @@
                     <a class="dropdown-item" href="../lista-nauczyciele2.php">Lista Nauczycieli</a>
                     <a class="dropdown-item" href="../dodaj-nauczyciela.php">Dodaj Nauczyciela</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Wyszukaj Nauczyciela</a>
+                  <!--  <a class="dropdown-item" href="#">Wyszukaj Nauczyciela</a> -->
                 </div>
             </li>
 

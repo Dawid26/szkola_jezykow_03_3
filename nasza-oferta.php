@@ -10,7 +10,7 @@ include_once('menu-sprawdzanie.php'); ?>
         <div class="row h-100 align-items-center">
             <div class="col-12 text-center">
                 <a href="#naszaMetoda" style="color:white;text-align:center;">
-                    <button class="col-4 p-4">
+                    <button class="col-7 p-4">
                         Zobacz nasze kursy
                     </button>
                 </a>
@@ -64,9 +64,9 @@ include_once('menu-sprawdzanie.php'); ?>
                 </div>
             </div>
         </div>
-        <div class="col-6 text-center center-block">
+        <div class="col-7 text-center center-block">
             <a href="wszystkie-kursy.php">
-                <button type="button" class="btn btn-primary btn-lg btn-block m-4">
+                <button type="button" class=" btn btn-primary btn-lg btn-block mt-4 mb-4">
                     Zobacz nasz sklep
                 </button>
             </a>
