@@ -79,7 +79,7 @@ if (!isset($_GET['id'])) {
         </div>
 
         <button type="submit" name="updateRecord" class="btn btn-success">Zmien adres</button>
-        <button type="submit" name="updateRecord" class="btn btn-success"><a
+        <button type="submit" name="updateRecord" class="btn btn-success"><a class="text-decoration-none text-white"
                     href="akcje/usun-adres-nauczyciela.php?id=<?php echo $id ?>"> Usuń adres</a></button>
     </form>
 
@@ -97,7 +97,7 @@ $results2 = $db_connection->query($query2);
     <thead>
     <tr>
         <th> nazwa</th>
-        <th> kraj_zamieszkania_id</th>
+        <th> kraj zamieszkania id</th>
     </tr>
     </thead>
     <tbody>

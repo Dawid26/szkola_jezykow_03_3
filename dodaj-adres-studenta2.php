@@ -103,6 +103,7 @@ if (isset($_POST['addRecord'])) {
 
     </form>
 </div>
+<div class="container">
 <?php
 
 $query2 = "Select
@@ -136,5 +137,5 @@ $results2 = $db_connection->query($query2);
 </table>
 </body>
 
-
+</div>
 </html>

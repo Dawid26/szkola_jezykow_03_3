@@ -73,7 +73,7 @@ if (!isset($kraj)) {
             </div>
         </div>
         <button type="submit" name="updateRecord" class="btn btn-success">Zmien adres</button>
-        <button type="submit" name="updateRecord" class="btn btn-success"><a
+        <button type="submit" name="updateRecord" class="btn btn-success"><a class="text-decoration-none text-white"
                     href="akcje/usun-adres-studenta.php?id=<?php echo $id ?>"> Usuń adres</a></button>
         <!--            <td class="text-center"><a href="usun-studenta.php?id=-->
         <?php //echo $result['student_id'] ?><!--"> <i class="fas fa-trash-alt "></i></a></td>-->

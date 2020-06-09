@@ -69,7 +69,7 @@ if (isset($_POST['updateRecord'])) {
             </div>
         </div>
 
-        <button type="submit" name="updateRecord" class="btn btn-success">Aktualizuj</button>
+        <button type="submit" name="updateRecord" class="btn btn-success">Dodaj Studenta</button>
     </form>
 </div>
 <?php include('footer.php'); ?>
