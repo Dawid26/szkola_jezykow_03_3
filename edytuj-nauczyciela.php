@@ -86,7 +86,7 @@ if (!isset($_GET['id'])) {
                        value="<?php echo $result['uprawnienia'] ?>">
             </div>
         </div>
-        <button type="submit" name="updateRecord" class="btn btn-success">Update Record</button>
+        <button type="submit" name="updateRecord" class="btn btn-success">Aktualizuj</button>
 
     </form>
 </div>

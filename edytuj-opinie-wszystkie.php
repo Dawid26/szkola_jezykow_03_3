@@ -85,7 +85,7 @@ WHERE opinia.opinia_id = :id LIMIT 1"; //'$id'
             </div>
         </div>
 
-        <button type="submit" name="aktualizujOpinie" class="btn btn-success">Update Record</button>
+        <button type="submit" name="aktualizujOpinie" class="btn btn-success">Aktualizuj</button>
 
     </form>
 </div>

@@ -75,7 +75,7 @@ WHERE materialy_do_lekcji_id = :materialy_do_lekcji_id LIMIT 1";
         </div>
 
 
-        <button type="submit" name="updateRecord" class="btn btn-success">Update Record</button>
+        <button type="submit" name="updateRecord" class="btn btn-success">Aktualizuj</button>
 
     </form>
 </div>

@@ -130,7 +130,7 @@ SELECT LAST_INSERT_ID() INTO @mysql_variable_here;
                        value="">
             </div>
         </div>
-        <button type="submit" name="updateRecord" class="btn btn-success">Update Record</button>
+        <button type="submit" name="updateRecord" class="btn btn-success">Aktualizuj</button>
     </form>
 </div>
 <?php

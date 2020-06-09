@@ -68,7 +68,7 @@ WHERE kategoria_id = :kategoria_id LIMIT 1";
 </div>
 
 
-<button type="submit" name="updateRecord" class="btn btn-success">Update Record</button>
+<button type="submit" name="updateRecord" class="btn btn-success">Aktualizuj</button>
 
 </form>
 </div>
