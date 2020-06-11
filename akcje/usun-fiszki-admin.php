@@ -17,11 +17,6 @@ if (!isset($_GET['id'])) {
             'id' => $id
         ]);
         $rowsDeleted = $result->rowCount();
-//        if($rowsDeleted==1){
-//            echo "success";
-//        } else {
-//            echo "failure";
-//        }
     }
 }
 ?>
@@ -52,11 +47,7 @@ if (!isset($_GET['id'])) {
         header('Location: ../lista-fiszki-admin.php?id='.$kurs_id);
         exit();
         ?>
-<!--        <script>-->
-<!--            window.setTimeout(function () {-->
-<!--                window.location = '../lista-fiszki.php';-->
-<!--            }, 1000);-->
-<!--        </script>-->
+
     <?php
     } else {
     ?>

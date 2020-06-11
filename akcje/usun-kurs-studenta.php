@@ -29,11 +29,7 @@ WHERE kurs_kurs_id = :kurs_id AND student_student_id = :id LIMIT 1";
             'kurs_id' => $kurs_id,
         ]);
         $rowsDeleted = $result->rowCount();
-//        if($rowsDeleted==1){
-//            echo "success";
-//        } else {
-//            echo "failure";
-//        }
+
     }
 }
 ?>

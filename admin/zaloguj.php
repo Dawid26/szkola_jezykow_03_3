@@ -16,8 +16,6 @@ if ($polaczenie->connect_errno != 0) {
 } else {
     $login = $_POST['login'];
     $haslo = $_POST['haslo'];
-//        $_SESSION['akcje'] = $_POST['akcje'];
-//        $_SESSION['haslo'] = $_POST['haslo'];
 
 
     $login = htmlentities($login, ENT_QUOTES, "UTF-8");

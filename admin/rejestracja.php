@@ -95,19 +95,6 @@ SELECT administrator.email, administrator.administrator_id FROM administrator WH
 ?>
 
 <!--<!DOCTYPE HTML>-->
-<!--<html lang="pl">-->
-<!--<head>-->
-<!--	<meta charset="utf-8" />-->
-<!--	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />-->
-<!--	<title>Osadnicy - załóż darmowe konto!</title>-->
-<!--	<script src='https://www.google.com/recaptcha/api.js'></script>-->
-<!---->
-<!--	<style>-->
-<!---->
-<!--	</style>-->
-<!--</head>-->
-<!---->
-<!--<body>-->
 <?php include('menu.php'); ?>
 <div class="logowanie">
 <form method="post">

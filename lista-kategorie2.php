@@ -38,7 +38,7 @@ $results = $db_connection->query($query);
 <!--    <script src="https://kit.fontawesome.com/ba6dc923ee.js" crossorigin="anonymous"></script>-->
 <!--    <link rel="stylesheet" href="css/style.css">-->
 <!--    <link rel="stylesheet" href="css/bootstrap.css">-->
-<!--    <title>Hello, world!</title>-->
+<!--    <title></title>-->
 <!--</head>-->
 <!--<body>-->
 <?php include('menu.php'); ?>

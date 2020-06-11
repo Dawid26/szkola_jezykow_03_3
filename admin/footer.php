@@ -1,18 +1,7 @@
 <!--footer-->
 <footer class="page-footer font-small pt-3 mt-auto">
     <div class="container">
-        <!--        <div class="row p-4 d-flex justify-content-between">-->
-        <!--            <div class="col-3">-->
-        <!--            -->
-        <!--                <p>Bazy danych, PHP i MySQL</p>-->
-        <!--            </div>-->
-        <!--            <div class="col-4">-->
-        <!--                <p>-->
-        <!--                    <i class='fas fa-user p-2' style='font-size:24px'> </i>-->
-        <!--                    Dawid Mariankowski-->
-        <!--                </p>-->
-        <!--            </div>-->
-        <!--        </div>-->
+
         <div class="row">
             <div class="text-center col-12">
                 <h6>Praca zaliczeniowa, bazy danych Dawid Mariankowski &copy; Copyright: <?php $year = date("Y");

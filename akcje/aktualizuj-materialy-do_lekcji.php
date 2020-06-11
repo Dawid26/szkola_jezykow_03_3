@@ -40,27 +40,6 @@ if (!isset($_POST['updateRecord'])) {
         ]);
 
 
-//        if ($result) {
-//            echo "działa"; ?>
-<!--            <script>-->
-<!--                window.setTimeout(function () {-->
-<!--                    window.location = '../materialy-do-lekcji.php';-->
-<!--                }, 1000);-->
-<!--            </script>-->
-<!--            <p></p>-->
-<!--            --><?php
-//            print_r($result);
-//        } else {
-//            echo "nie dzia"; ?>
-<!--            <script>-->
-<!--                window.setTimeout(function () {-->
-<!--                    window.location = '../lista-studenci.php';-->
-<!--                }, 1000);-->
-<!--            </script>-->
-<!--            <p></p>-->
-<!--            --><?php
-//
-//        }
         if( $result){
             $uprawnienia = $_SESSION['uprawnienia'];
             if($uprawnienia == 'admin'){?>
