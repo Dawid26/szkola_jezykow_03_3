@@ -28,11 +28,11 @@ include('menu.php');
 
 </form>
 </div>
-
+<div class="container text-center">
 <?php
 if (isset($_SESSION['blad'])) echo $_SESSION['blad'];
 ?>
-
+</div>
 <?php include('footer.php'); ?>
 </body>
 </html>

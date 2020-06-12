@@ -41,13 +41,13 @@ if ($polaczenie->connect_errno != 0) {
                 $rezultat->free_result();
                 header('Location: ../witaj.php');
             } else {
-                $_SESSION['blad'] = '<span style="color:red">1Nieprawidłowy email lub hasło!</span>';
+                $_SESSION['blad'] = '<span style="color:red">Nieprawidłowy email lub hasło!</span>';
                 header('Location: indexZ.php');
             }
 
         } else {
 
-            $_SESSION['blad'] = '<span style="color:red">2Nieprawidłowy email lub hasło!</span>';
+            $_SESSION['blad'] = '<span style="color:red">Nieprawidłowy email lub hasło!</span>';
             header('Location: indexZ.php');
 
         }
