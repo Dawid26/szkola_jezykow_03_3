@@ -8,7 +8,7 @@ if (isset($_POST['dodaj_materialy_do_lekcji'])) {
     $opis = filter_var($_POST['opis'], FILTER_SANITIZE_STRING);
     $link_lekcja_pdf = filter_var($_POST['link_lekcja_pdf'], FILTER_SANITIZE_STRING);
     $kurs_kurs_id = filter_var($_POST['kurs_kurs_id'], FILTER_SANITIZE_STRING);
-   $studentId =  $_SESSION['student_id'];
+//   $studentId =  $_SESSION['student_id'];
 
     $query = "INSERT INTO materialy_do_lekcji ( nazwa, opis, link_lekcja_pdf, kurs_kurs_id)
                        VALUES ( :nazwa, :opis, :link_lekcja_pdf, :kurs_kurs_id)";
@@ -69,7 +69,7 @@ if (isset($_POST['dodaj_materialy_do_lekcji'])) {
         </div>
 
 
-        <button type="submit" name="dodaj_materialy_do_lekcji" class="btn btn-success">Dodaj materiału do lekcji</button>
+        <button type="submit" name="dodaj_materialy_do_lekcji" class="btn btn-success">Dodaj materiały do lekcji</button>
 
     </form>
 </div>

@@ -23,9 +23,11 @@ if (isset($_SESSION['zalogowany'])) {
     <input type="submit" value="Zaloguj się" class="przyciskZaloguj"/>
 </form>
 </div>
+<div class="text-center">
 <?php
 if (isset($_SESSION['blad'])) echo $_SESSION['blad'];
 ?>
+</div>
 
 <?php include('footer.php'); ?>
 </body>
