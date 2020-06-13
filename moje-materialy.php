@@ -8,13 +8,13 @@ if (!$isSessionActive) {
 }
 $polaczenie = new mysqli($db_host, $db_username, $db_password, $db_name);
 $zalogowany = $_SESSION['zalogowany'];
-echo $zalogowany;
+//echo $zalogowany;
 if ($zalogowany) {
     //header('Location: indexZ.php');
-    echo 'zalogowany';
+//    echo 'zalogowany';
     //exit();
 }
-echo 'get id' . $_GET['id'];
+//echo 'get id' . $_GET['id'];
 $kurs_link_id = $_GET['id'];
 //$polaczenie = new mysqli($db_host, $db_username, $db_password, $db_name);
 
@@ -26,7 +26,7 @@ $nazwisko = $_SESSION['nazwisko'];
 $uprawnienia = $_SESSION['uprawnienia'];
 //         $kurs_kurs_id = $_SESSION['kurs_kurs_id'];
 
-echo 'student id =' . $student_id . ',,';
+//echo 'student id =' . $student_id . ',,';
 //	echo 'kurs_kurs_id='. $kurs_kurs_id;
 
 $studentId = $_SESSION['student_id'];
@@ -39,7 +39,9 @@ $query = "Select materialy_do_lekcji.materialy_do_lekcji_id,
        materialy_do_lekcji.kurs_kurs_id
 From materialy_do_lekcji WHERE materialy_do_lekcji.kurs_kurs_id = '$kurs_link_id '";
 $results = $db_connection->query($query);
-
+?>
+<div class="container">
+<?php
 foreach ($results as $result) {
     ?>
     <div class="col-md-4">
@@ -60,8 +62,12 @@ foreach ($results as $result) {
 ?>
 
 
-<p></p></br><?php
+<p></p></br>
+</div>
+<div class="container">
+<?php
 include('footer.php');
 include('zalogowany.php');
 $polaczenie->close();
 ?>
+</div>
