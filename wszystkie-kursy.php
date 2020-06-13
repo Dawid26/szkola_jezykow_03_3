@@ -173,8 +173,8 @@ From kurs ORDER BY kurs.nazwa ASC";
     <!--                            <img src="zdjecia/nasza-oferta/wszystkie-kursy2.jpg" class="card-img-top"><br>-->
     <!--                            <h4 class="card-text text-info">Kurs premium - wszystkie kursy + lekcje z nauczycielem</h4>-->
     <!--                            <h4 class="card-text text-danger">PLN 280 / miesięcznie</h4>-->
-    <!--                            <!--						<input type="text" name="quantity" value="1" class="form-control" />-->
-    -->
+    <!--                    						<input type="text" name="quantity" value="1" class="form-control" />-->
+
     <!---->
     <!---->
     <!--                        </div>-->

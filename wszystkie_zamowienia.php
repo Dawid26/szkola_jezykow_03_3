@@ -7,6 +7,7 @@ if (!$isSessionActive) {
     session_start();
 }
 $polaczenie = new mysqli($db_host, $db_username, $db_password, $db_name);
+
 $zalogowany = $_SESSION['zalogowany'];
 if ($zalogowany) {
     $student_id = $_SESSION['student_id'];
@@ -57,20 +58,44 @@ FROM student_has_kurs INNER JOIN
                         <p class="card-text">Cena: <?php echo $result['cena'] ?></p>
 
                         <p class="card-text">Ostatnia wplata:
-                            <?php echo ' ' . ((int)$result['ostatnia_wplata'] ? $result['ostatnia_wplata'] : ' ' . 'Brak'); ?>
+                            <?php if((int)$result['ostatnia_wplata']) {
+                                echo $result['ostatnia_wplata'] ;
+                            }else {
+                                echo ' ' . 'Brak '.  (int)$result['ostatnia_wplata'];
+                            }
+?>
                         </p>
                         <p class="card-text">Data zamówienia: <?php echo $result['data_utworzenia'] ?></p>
 
                         <p class="card-text">Odnawialny:
-                            <?php echo ' ' . ((int)$result['odnawialny'] ? (int)$result['odnawialny'] : ' ' . 'Nie'); ?>
+                            <?php if((int)$result['odnawialny']){
+                             echo  'Tak';
+                            }else {
+                                echo  ' ' . 'Nie';
+                            }
+                          ?>
                         </p>
                         <p class="card-text">Oplacony:<b>
-                                <?php echo ' ' . ((int)$result['oplacony'] ? 'Tak' : 'Nie') . ''; ?>
+                                <?php if((int)$result['oplacony']==1){
+                                    echo 'Tak';
+                                    }else{
+                                    echo 'Nie ' .(int)$result['oplacony'];
+                                    }
+                                 ?>
                             </b></p>
                         <p class="card-text"><b>
-                                <?php echo ' ' . (!(int)$result['oplacony'] ? 'Pozostało '.$result['cena'].'zł do zapłacenia' :
-                                        'Kurs został już opłacony') . ''; ?>
-                                <?php if((int)$result['oplacony']){}else{$cenaCalkowita += $result['cena'];} ?>
+                                <?php if((int)$result['oplacony']==1)
+                                {
+                                    echo 'Kurs został już opłacony ' .(int)$result['oplacony'];
+                                }
+                                else{
+                                    echo'Pozostało '.$result['cena'].'zł do zapłacenia';
+                                }
+                                         ?>
+                                <?php if((int)$result['oplacony']==1){
+
+                                }else{$cenaCalkowita += $result['cena'];
+                                } ?>
                             </b></p>
                         <p>
                             <a style="color:white;" href="dodaj-opinie.php?kurs_id=<?php echo $result['kurs_kurs_id'] ?>
@@ -101,10 +126,17 @@ FROM student_has_kurs INNER JOIN
         Pozostało do zapaty:<b> <?php     echo  $cenaCalkowita;?></b>
     </p>
     <p>
-        <?php
-        echo ' <p>Dziękujemy za zakupy, twój adres email  to: <b>'
-            . (isset($_SESSION['email']) ?  $_SESSION['email'] .'</p>': ' ' . 'nieznajomy');
+
+       <p>Dziękujemy za zakupy, twój adres email  to: <b>   <?php
+            if(isset($_SESSION['email'])){
+                echo  $_SESSION['email'] .'</p> </b>';
+                     echo 'Student ID: <b>' .  $student_id.'</b>';
+                ;
+        }else{
+           echo  ' ' . 'nieznajomy';
+        }
         echo ' ' . ($_SESSION["uprawnienia"] ? "</b><p>Uprawnienia:<b> " . $_SESSION['uprawnienia'] .'</p>': ' ' . 'Brak danych');
+
         ?>
         </b></p>
 

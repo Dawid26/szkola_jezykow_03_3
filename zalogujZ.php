@@ -3,12 +3,8 @@ $isSessionActive = defined('SID');
 if (!$isSessionActive) {
     session_start();
 }
-
-
 if (isset($_SESSION['zalogowany'])) {
-
     header('Location: witaj.php');
-
 }
 require_once "connectZ.php";
 require_once('config.php');
