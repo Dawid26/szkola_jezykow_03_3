@@ -2,17 +2,7 @@
 require_once('config.php');
 include_once('menu-sprawdzanie-admin.php');
 
-//$query = "Select
-//    fiszki.kurs_id,
-//    fiszki.nazwa,
-//    fiszki.opis,
-//    fiszki.cena,
-//    fiszki.zdjecie,
-//    fiszki.data_utworzenia,
-//    fiszki.kategoria_kategoria_id,
-//    fiszki.nauczyciel_nauczyciel_id
-//From
-//    kurs";
+
 $query = "Select
     fiszki.fiszki_id,
     fiszki.nazwa,

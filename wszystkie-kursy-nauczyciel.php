@@ -22,6 +22,9 @@ $query = "Select
        kurs.kurs_id
 From kurs";
 $results = $db_connection->query($query);
+?>
+<div class="container-fluid">
+     <?php
 foreach ($results as $result) {
     ?>
     <div class="col-md-4">
@@ -39,7 +42,7 @@ foreach ($results as $result) {
     </div>
     <?php
 }?>
-<p></p></br>
+<p></p></br></div>
 <?php
 include('footer.php');
 
