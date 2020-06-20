@@ -50,7 +50,7 @@ if (isset($_POST['addRecord'])) {
         print_r($result);
     }
 } else {
-    echo "error linia 45";
+//    echo "error linia 45";
 }
 
 ?>

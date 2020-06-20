@@ -61,7 +61,7 @@ FROM student_has_kurs INNER JOIN
                             <?php if((int)$result['ostatnia_wplata']) {
                                 echo $result['ostatnia_wplata'] ;
                             }else {
-                                echo ' ' . 'Brak '.  (int)$result['ostatnia_wplata'];
+                                echo ' ' . 'Brak ';
                             }
 ?>
                         </p>
@@ -79,14 +79,14 @@ FROM student_has_kurs INNER JOIN
                                 <?php if((int)$result['oplacony']==1){
                                     echo 'Tak';
                                     }else{
-                                    echo 'Nie ' .(int)$result['oplacony'];
+                                    echo 'Nie ';
                                     }
                                  ?>
                             </b></p>
                         <p class="card-text"><b>
                                 <?php if((int)$result['oplacony']==1)
                                 {
-                                    echo 'Kurs został już opłacony ' .(int)$result['oplacony'];
+                                    echo 'Kurs został już opłacony ' ;
                                 }
                                 else{
                                     echo'Pozostało '.$result['cena'].'zł do zapłacenia';
