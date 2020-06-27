@@ -107,7 +107,6 @@ FROM student_has_kurs INNER JOIN
                         </p>
                     </div>
                 </div>
-
             </div>
             <?php
         }

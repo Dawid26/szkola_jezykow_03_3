@@ -34,21 +34,6 @@ $char_collation = 'utf8_general_ci';
 $connect = mysqli_connect("localhost", "dawidma1_113", "testmarian", "dawidma1_szkolajezykow114");
 $connect ->set_charset("utf8");
 
-//if(isset($_POST["dodaj_do_bazy"]))
-//{
-//
-//    if(isset($_SESSION["koszyk_karta"])){
-//        unset($_SESSION["koszyk_karta"]);
-//    }
-//    if(isset($_SESSION["cena_calkowita"])){
-//        $dziekowanie = 0;
-//        $dziekowanie=  "Dziękujemy za zakupy kwota do zapłaty to:" .$_SESSION["cena_calkowita"];
-//        unset($_SESSION["cena_calkowita"]);
-//    }
-//
-//
-//    $dziekowanie =  0;
-//}
 if (isset($_POST["dodaj_do_bazy"])) {
     echo '<script>alert("Dziękujemy za zakup")</script>';
 
@@ -96,13 +81,6 @@ if (isset($_GET["action"])) {
 }
 
 ?>
-
-<!--<head>-->
-<!--    <title>Praca zaliczeniowa </title>-->
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>-->
-<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>-->
-<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
-<!--</head>-->
 
 <div class="container-fluid">
     <div class="col-6 text-center center-block">
@@ -165,32 +143,7 @@ From kurs ORDER BY kurs.nazwa ASC";
             <?php
         }
     } ?>
-    <!--//    premium start-->
-    <!--    <div class="col-12 col-sm-12 col-lg-6 col-xl-4">-->
-    <!--                <div class="card mb-4 box-shadow" style="border:1.1px solid #555666; background-color:#f1f1f1; border-radius:5px;" align="center">-->
-    <!--                    <form method="post" action="wszystkie-kursy.php?action=add&amp;id=23">-->
-    <!--                        <div class="card-body">-->
-    <!--                            <img src="zdjecia/nasza-oferta/wszystkie-kursy2.jpg" class="card-img-top"><br>-->
-    <!--                            <h4 class="card-text text-info">Kurs premium - wszystkie kursy + lekcje z nauczycielem</h4>-->
-    <!--                            <h4 class="card-text text-danger">PLN 280 / miesięcznie</h4>-->
-    <!--                    						<input type="text" name="quantity" value="1" class="form-control" />-->
 
-    <!---->
-    <!---->
-    <!--                        </div>-->
-    <!--                    </form>-->
-    <!--                    <p>-->
-    <!--                        <a style="color:white;" href="lista-opinie.php?id=23">-->
-    <!--                            <button type="submit" class="btn btn-primary mt-2 ml-1">-->
-    <!---->
-    <!--                                Opinie-->
-    <!---->
-    <!--                            </button>-->
-    <!--                        </a>-->
-    <!--                    </p>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--//    premium end-->
 
     <div style="clear:both"></div>
     <br/>
