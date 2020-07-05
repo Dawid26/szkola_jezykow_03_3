@@ -100,7 +100,7 @@ include_once('menu-sprawdzanie.php'); ?>
                          alt="niemiecki">
                 </div>
                 <h3 class="font-weight-bold mt-3 mb-3 text-center">Zbigniew</h3>
-                <p class="text-center">Nasz nauczyciel nauczyciel niemieckiego dla informatykow</p>
+                <p class="text-center">Nasz nauczyciel niemieckiego w infromatyce z piętnastoletnim doświadczeniem </p>
             </div>
         </div>
     </div>

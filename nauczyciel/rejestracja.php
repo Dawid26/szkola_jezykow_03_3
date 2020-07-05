@@ -94,7 +94,7 @@ SELECT administrator.email, administrator.administrator_id FROM administrator WH
 
 ?>
 
-
+wd
 <?php include('menu.php'); ?>
 <div class="logowanie">
 <form method="post">
